@@ -37,6 +37,24 @@ else if (move != (“rock” || “paper” || “scissors”)) {return randomPl
     
 function getWinner(playerMove,computerMove) {
     var winner;
+if (playerMove===computerMove){winner = “Tie”};
+else if (playerMove === “rock” && computerMove === “scissors”)
+{winner =“Player!”;}
+else if (playerMove === “paper” && computerMove ===“ scissors”)
+{winner =“Computer!”;}
+else if (playerMove === “scissors” && computerMove === “paper”)
+{winner = “Player!”;}
+else if (playerMove === “scissors” && computerMove === “rock”)
+{winner = “Computer!”;}
+else if (playerMove === “rock” && computerMove ===“paper”)
+{winner =“Computer!”;}
+else if (playerMove === “paper” && computerMove === “rock”)
+{winner = “Player!”;}
+}
+return winner;
+}
+
+
     // Write code that will set winner to either 'player', 'computer', or 'tie' based on the values of playerMove and computerMove.
     // Assume that the only values playerMove and computerMove can have are 'rock', 'paper', and 'scissors'.
     // The rules of the game are that 'rock' beats 'scissors', 'scissors' beats 'paper', and 'paper' beats 'rock'.
