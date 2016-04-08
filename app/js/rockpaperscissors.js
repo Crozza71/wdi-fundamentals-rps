@@ -3,6 +3,8 @@
 ////////////////////////////////////////////////
 'use strict';
 
+
+
 function getInput() {
     console.log("Please choose either 'rock', 'paper', or 'scissors'.")
     return prompt();
@@ -21,40 +23,38 @@ function randomPlay() {
 /*           Write Your Code Below            */
 ////////////////////////////////////////////////
 
-function getPlayerMove(move) {
-var move;
-if (move === (“rock”|| “paper” || “scissors” )) {return move; }
-else if (move != (“rock” || “paper” || “scissors”)) {return getInput();}
+var getPlayerMove= function(move) {
+if (move === ('rock'|| 'paper' || 'scissors' )) return move; 
+else {
+ return getInput();}
 };
 
-
-function getComputerMove(move) {
-var move;
-if (move === (“rock”|| “paper” || “scissors” )) {return move; }
-else if (move != (“rock” || “paper” || “scissors”)) {return randomPlay();}
+var getComputerMove= function(move) {
+if (move === (‘rock’|| ‘paper’ || ‘scissors’ )) return move; 
+else {
+ return randomPlay();}
 };
 
+getInput();
     
-function getWinner(playerMove,computerMove) {
-    var winner;
-if (playerMove===computerMove){winner = “Tie”};
-else if (playerMove === “rock” && computerMove === “scissors”)
-{winner =“Player!”;}
-else if (playerMove === “paper” && computerMove ===“ scissors”)
-{winner =“Computer!”;}
-else if (playerMove === “scissors” && computerMove === “paper”)
-{winner = “Player!”;}
-else if (playerMove === “scissors” && computerMove === “rock”)
-{winner = “Computer!”;}
-else if (playerMove === “rock” && computerMove ===“paper”)
-{winner =“Computer!”;}
-else if (playerMove === “paper” && computerMove === “rock”)
-{winner = “Player!”;}
+var getWinner= function(playerMove,computerMove) {
+if (playerMove===computerMove){winner = ‘tie’};
+else if (playerMove === ‘rock’ && computerMove === ‘scissors’)
+{winner =‘player’;}
+else if (playerMove === ‘paper’ && computerMove === ‘scissors’)
+{winner =‘computer’;}
+else if (playerMove === ‘scissors’ && computerMove === ‘paper’)
+{winner = ‘player’;}
+else if (playerMove === ‘scissors’ && computerMove === ‘rock’)
+{winner = ‘computer’;}
+else if (playerMove === ‘rock’ && computerMove ===‘paper’)
+{winner =‘computer’;}
+else if (playerMove === ‘paper’ && computerMove === ‘rock’)
+{winner = ‘player’;}
 }
-return winner;
 }
 
-
+getWinner();
  
 
 function playToFive() {
@@ -74,3 +74,5 @@ console.log('The score is currently ' + playerWins + ' to ' + computerWins + '\n
 }
    return [playerWins, computerWins];
 }
+
+platToFive();
