@@ -61,16 +61,18 @@ function playToFive() {
         var playerMove = getPlayerMove();
         var computerMove = getComputerMove();
         var winner = getWinner(playerMove, computerMove);
+        console.log(new Date());
         if (winner === "player") {
             console.log("Player Wins" + "\n", "Player chose " + playerMove + " while Computer chose " + computerMove);
             playerWins += 1;
             console.log("The score is currently " + playerWins + " to " + computerWins + "\n");
-        } else if (winner === "computer"); {
+        } else if (winner === "computer") {
             console.log("Computer Wins" + "\n", "Player chose " + playerMove + " while Computer chose " + computerMove);
             computerWins += 1;
             console.log("The score is currently " + playerWins + " to " + computerWins + "\n");
-}
+        } else {
+            console.log("Result is a Tie");
+            }
     }return [playerWins, computerWins];
 }
 playToFive();
-        
